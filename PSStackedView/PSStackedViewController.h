@@ -146,7 +146,8 @@ enum {
 /// animate setting of large left inset
 - (void)setLargeLeftInset:(NSUInteger)largeLeftInset animated:(BOOL)animated;
 
-
+/// returns current left border (how it *should* be)
+- (NSUInteger)currentLeftInset;
 
 // compatibility with UINavigationBar -- returns nil
 #ifdef ALLOW_SWIZZLING_NAVIGATIONCONTROLLER
