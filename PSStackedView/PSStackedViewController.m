@@ -800,8 +800,8 @@ enum {
                 }
             }
             
-            //don't allow views to leave the right edge
-            if (currentVCLeftPosition < [self screenWidth] - currentViewController.containerView.width)
+            //don't allow bottom-most view to leave the right edge
+            if (currentVCLeftPosition < [self screenWidth] - currentViewController.containerView.width && idx == 0)
                 currentVCLeftPosition = [self screenWidth] - currentViewController.containerView.width;
 
             currentViewController.containerView.left = currentVCLeftPosition;
