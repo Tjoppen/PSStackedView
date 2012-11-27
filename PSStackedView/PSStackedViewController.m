@@ -800,6 +800,10 @@ enum {
                 }
             }
             
+            //don't allow views to leave the right edge
+            if (currentVCLeftPosition < [self screenWidth] - currentViewController.containerView.width)
+                currentVCLeftPosition = [self screenWidth] - currentViewController.containerView.width;
+
             currentViewController.containerView.left = currentVCLeftPosition;
             
             isTopViewController = NO; // there can only be one.
